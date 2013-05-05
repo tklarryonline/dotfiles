@@ -1,0 +1,10 @@
+[user]
+	name = Luan Nguyen Thanh
+	email = tklarryonline@gmail.com
+[color]
+	ui = auto
+[alias]
+	del = !git ls-files --deleted -z | xargs -0 git rm
+	last = log -1 HEAD
+[core]
+	excludesfile = /home/tklarryonline/.gitignore
