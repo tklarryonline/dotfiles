@@ -8,3 +8,4 @@
 	last = log -1 HEAD
 [core]
 	excludesfile = /home/tklarryonline/.gitignore
+	editor = vim
