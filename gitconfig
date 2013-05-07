@@ -7,6 +7,7 @@
 	del = !git ls-files --deleted -z | xargs -0 git rm
 	last = log -1 HEAD
 	ru = remote update
+	stat = status
 [core]
 	excludesfile = /home/tklarryonline/.gitignore
 	editor = vim
