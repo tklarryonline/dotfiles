@@ -94,6 +94,8 @@ alias cd...='cd ../..'
 alias cd....='cd ../../..'
 # xsel alias
 alias xselclip='xsel --clipboard'
+# make alias
+alias makelog='make >&log'
 
 
 # Add an "alert" alias for long running commands.  Use like so:
