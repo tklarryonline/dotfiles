@@ -96,6 +96,8 @@ alias cd....='cd ../../..'
 alias xselclip='xsel --clipboard'
 # make alias
 alias makelog='make >&log'
+# sudo alias
+alias suvim='sudo vim'
 
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -142,14 +144,14 @@ mkgo() {
 COLOR_NONE="\[\033[0m\]"
 
 # Symbols
-LIGHTNING_BOLT="⚡"
-      UP_ARROW="↑"
-    DOWN_ARROW="↓"
-      UD_ARROW="↕"
-      FF_ARROW="→"
-       RECYCLE="♺"
-        MIDDOT="•"
-     PLUSMINUS="±"
+LIGHTNING_BOLT=" ⚡ "
+      UP_ARROW=" ↑ "
+    DOWN_ARROW=" ↓ "
+      UD_ARROW=" ↕ "
+      FF_ARROW=" → "
+       RECYCLE=" ♺ "
+        MIDDOT=" • "
+     PLUSMINUS=" ± "
 
 # have git branch in the terminal
 parse_git_branch() {
