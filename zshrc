@@ -1,3 +1,8 @@
+# Give a welcome message
+echo "Welcome"
+cat ~/dotfiles/art
+echo "The Awesomeness has just begun..."
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -5,8 +10,6 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="tklarry"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -49,15 +52,42 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 # cd aliases
-alias cd..='cd ..'
-alias cd...='cd ../..'
-alias cd....='cd ../../..'
+alias cd1='cd ..'
+alias cd2='cd ../..'
+alias cd3='cd ../../..'
+alias cd4='cd ../../../..'
+alias cd5='cd ../../../../..'
+alias back='cd -'
 # xsel aliases
 alias xselclip='xsel --clipboard'
 # make aliases
 alias makelog='make >&log'
 # sudo aliases
 alias suvim='sudo vim'
+# important dir aliases
+alias ohmyzsh='cd ~/.oh-my-zsh'
+alias dotfiles='cd ~/dotfiles'
+# config aliases
+alias zshrc='vim ~/.zshrc'
+alias zshreload='source ~/.zshrc && clear && echo "~/.zshrc successfully reloaded!"'
+alias gitconf='vim ~/.gitconfig'
+# other aliases
+alias cl='clear'
+
+### Exports
+export TERM='xterm-256color'
+export EDITOR=vim
+
+### Some conditions
+# enable color support of ls and also add handy aliases
+if [ "$TERM" != "dumb" ]; then
+	[ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
+	[ -e "$DIR_COLORS" ] || DIR_COLORS=""
+	eval "`dircolors -b $DIR_COLORS`"
+	alias ls='ls --color=auto'
+	alias dir='ls --color=auto --format=vertical'
+	alias vdir='ls --color=auto --format=long'
+fi
 
 ### My own functions
 #
