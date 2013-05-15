@@ -1,11 +1,8 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="ys"
+# I will use my own theme!
+ZSH_THEME="tklarry"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -45,3 +42,28 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+### My own aliases
+# ll aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+# cd aliases
+alias cd..='cd ..'
+alias cd...='cd ../..'
+alias cd....='cd ../../..'
+# xsel aliases
+alias xselclip='xsel --clipboard'
+# make aliases
+alias makelog='make >&log'
+# sudo aliases
+alias suvim='sudo vim'
+
+### My own functions
+#
+# mkgo - mkdir + cd
+mkgo() {
+	mkdir $1 && cd $1
+}
+
+
