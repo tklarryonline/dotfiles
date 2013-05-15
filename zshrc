@@ -1,15 +1,16 @@
+### ENV vars
+DOTFILES='~/dotfiles'
+
 # Give a welcome message
-echo "Welcome"
+echo "$fg[green]Welcome"
 cat ~/dotfiles/art
-echo "The Awesomeness has just begun..."
+echo "The Awesomeness has just begun...$reset_color\n"
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
 # I will use my own theme!
 ZSH_THEME="tklarry"
-
-# Example aliases
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -69,7 +70,7 @@ alias ohmyzsh='cd ~/.oh-my-zsh'
 alias dotfiles='cd ~/dotfiles'
 # config aliases
 alias zshrc='vim ~/.zshrc'
-alias zshreload='source ~/.zshrc && clear && echo "~/.zshrc successfully reloaded!"'
+alias zshreload='clear && source ~/.zshrc && echo "~/.zshrc successfully reloaded!"'
 alias gitconf='vim ~/.gitconfig'
 # other aliases
 alias cl='clear'
