@@ -2,9 +2,9 @@
 DOTFILES='~/dotfiles'
 
 # Give a welcome message
-echo "$fg[green]Welcome"
+echo "Welcome"
 cat ~/dotfiles/art
-echo "The Awesomeness has just begun...$reset_color\n"
+echo "The Awesomeness has just begun...\n"
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
