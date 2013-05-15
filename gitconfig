@@ -9,7 +9,7 @@
 	ru = remote update
 	stat = status
 	upstt = "!git ru; git stat"
-	cm = !git add . && git commit
+	ac = !git add . && git commit
 [core]
 	excludesfile = /home/tklarryonline/.gitignore
 	editor = vim
