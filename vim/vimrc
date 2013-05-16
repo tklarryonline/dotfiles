@@ -1,0 +1,180 @@
+" ============================================
+" MY VERY .VIMRC!!!
+" ============================================
+
+" --------------------------------------------
+" IMPORTANT
+" --------------------------------------------
+" Link to Vundle
+so ~/dotfiles/vim/vundle.vim
+
+" --------------------------------------------
+" MOVING AROUND, SEARCHING AND PATTERNS
+" --------------------------------------------
+" Shows search match as you type
+set incsearch
+" Ignores case when using a search pattern
+set ignorecase
+" Overrides 'ignorecase' when pattern has upper chars
+set smartcase
+
+" --------------------------------------------
+" TAGS
+" --------------------------------------------
+
+" --------------------------------------------
+" DISPLAYING TEXT
+" --------------------------------------------
+" Displays line number
+set number
+" Number of lines for the command window
+set cmdheight=2
+
+" --------------------------------------------
+" SYNTAX, HIGHLIGHTING and SPELLING
+" --------------------------------------------
+" Enables syntax highlighting
+syntax enable
+" Filetype Detection ON
+filetype plugin indent on
+" 80-character indicator line
+set colorcolumn=80
+" Highlights current line
+set cul
+
+" --------------------------------------------
+" 6 multiple windows
+" --------------------------------------------
+
+" --------------------------------------------
+" 7 multiple tab pages
+" --------------------------------------------
+
+" --------------------------------------------
+" 8 terminal
+" --------------------------------------------
+set ttyfast
+
+" --------------------------------------------
+" 9 using the mouse
+" --------------------------------------------
+
+" --------------------------------------------
+" 10 printing
+" --------------------------------------------
+
+" --------------------------------------------
+" 11 messages and info
+" --------------------------------------------
+" Shows incomplete commands as type
+set showcmd
+" Always displays the current cursor position in Status Bar
+set ruler
+" Asks to save buffer instead of failing when executing
+" commands which close buffers
+set confirm
+
+" --------------------------------------------
+" 12 selecting text
+" --------------------------------------------
+
+" --------------------------------------------
+" 13 editing text
+" --------------------------------------------
+" Allows backspacing over everything
+set backspace=indent,eol,start
+" Shows matching parenthesis
+set showmatch
+" Uses many levels of undo
+set undolevels=1000
+
+
+" --------------------------------------------
+" 14 tabs and indenting -- I prefer Tab to Space
+" --------------------------------------------
+" Auto indenting ON
+set autoindent
+" Copies the previous indentation on auto indenting
+set copyindent
+" Uses tabs instead of spaces
+set noexpandtab
+" Sets tab stop = 4 - my fav stop
+set tabstop=4
+" Number of spaces used for auto indenting
+set shiftwidth=4
+" Inserts tabs on the start of a line according to shiftwidth
+set smarttab
+" Uses multiple of shiftwidth when indenting with '<' and '>'
+set shiftround
+" Easier block indenting (does not exit visual mode after one shift)
+vnoremap < <gv
+vnoremap > >gv
+
+
+" --------------------------------------------
+" 15 folding
+" --------------------------------------------
+
+" --------------------------------------------
+" 16 diff mode
+" --------------------------------------------
+
+" --------------------------------------------
+" 17 mapping
+" --------------------------------------------
+
+" --------------------------------------------
+" 18 reading and writing files
+" --------------------------------------------
+" Auto reloads file on change
+set autoread
+
+" --------------------------------------------
+" 19 the swap file
+" --------------------------------------------
+
+" --------------------------------------------
+" 20 command line editing
+" --------------------------------------------
+" Remembers 500 commands
+set history=500
+
+" --------------------------------------------
+" 21 executing external commands
+" --------------------------------------------
+
+" --------------------------------------------
+" 22 running make and jumping to errors
+" --------------------------------------------
+
+" --------------------------------------------
+" 23 language specific
+" --------------------------------------------
+
+" --------------------------------------------
+" 24 multi-byte characters
+" --------------------------------------------
+" Changes encoding to UTF-8
+set encoding=utf-8
+
+" --------------------------------------------
+" 25 various
+" --------------------------------------------
+
+" --------------------------------------------
+" FUNCTIONS
+" --------------------------------------------
+augroup myvimrchooks
+au!
+autocmd bufwritepost .vimrc source ~/.vim/vimrc
+augroup END
+
+" --------------------------------------------
+" CUSTOM KEY BINDINGS
+" --------------------------------------------
+" F8 indents whole file
+nnoremap <f7> gg=G
+
+" ============================================
+" END MY VERY .VIMRC!!!
+" ============================================
