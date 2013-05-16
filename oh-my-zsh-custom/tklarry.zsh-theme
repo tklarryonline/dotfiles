@@ -19,6 +19,15 @@ function box_name {
     [ -f ~/.box-name ] && cat ~/.box-name || hostname -s
 }
 
+# prompt_char function
+# Change the prompt based on current dir:
+# normal prompt: →
+# gitdir prompt: ±
+function prompt_char {
+	git branch >/dev/null 2>/dev/null && echo "$PLUSMINUS" && return
+	echo "$FF_ARROW"
+}
+
 # Directory info.
 local current_dir='${PWD/#$HOME/~}'
 
@@ -33,6 +42,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}${CHECK}"
 PROMPT="
 %{$fg[cyan]%}%n%{$reset_color%}: \
 %{$fg[yellow]%}${current_dir}%{$reset_color%}\
-${git_info} \
-%{$fg[white]%}[%*]
-%{$terminfo[bold]$fg[blue]%}${FF_ARROW} %{$reset_color%}"
+${git_info}
+%{$terminfo[bold]$fg[blue]%}$(prompt_char) %{$reset_color%}"
+
+RPROMPT="%{$fg[white]%}[%*]"

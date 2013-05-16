@@ -3,7 +3,7 @@ DOTFILES=$HOME/dotfiles
 
 # Give a welcome message
 echo "Welcome"
-cat ~/dotfiles/art
+cat $DOTFILES/art
 echo "The Awesomeness has just begun...\n"
 
 # Path to your oh-my-zsh configuration.
@@ -33,7 +33,8 @@ ZSH_THEME="tklarry"
 # Uncomment following line if you want to disable command autocorrection
 # DISABLE_CORRECTION="true"
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
+# Uncomment following line if you want red dots to be displayed 
+# while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment following line if you want to disable marking untracked files under
@@ -41,7 +42,8 @@ ZSH_THEME="tklarry"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Which plugins would you like to load? 
+# (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
@@ -71,11 +73,13 @@ alias makelog='make >&log'
 # sudo aliases
 alias suvim='sudo vim'
 # important dir aliases
-alias ohmyzsh='cd ~/dotfiles/.oh-my-zsh'
-alias dotfiles='cd ~/dotfiles'
+alias ohmyzsh="cd $DOTFILES/.oh-my-zsh"
+alias dotfiles="cd $DOTFILES"
 # config aliases
 alias zshrc='vim ~/.zshrc'
+alias zshtheme="vim $DOTFILES/oh-my-zsh-custom/tklarry.zsh-theme"
 alias zshreload='clear && source ~/.zshrc'
+alias vimrc='vim ~/.vimrc'
 alias gitconf='vim ~/.gitconfig'
 # other aliases
 alias cl='clear'
