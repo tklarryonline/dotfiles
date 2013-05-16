@@ -1,5 +1,5 @@
 ### ENV vars
-DOTFILES='~/dotfiles'
+DOTFILES=$HOME/dotfiles
 
 # Give a welcome message
 echo "Welcome"
@@ -7,7 +7,10 @@ cat ~/dotfiles/art
 echo "The Awesomeness has just begun...\n"
 
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/dotfiles/.oh-my-zsh
+ZSH=$DOTFILES/.oh-my-zsh
+
+# Path to my custom folders
+ZSH_CUSTOM=$DOTFILES/oh-my-zsh-custom
 
 # I will use my own theme!
 ZSH_THEME="tklarry"
