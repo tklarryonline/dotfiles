@@ -7,7 +7,7 @@ cat ~/dotfiles/art
 echo "The Awesomeness has just begun...\n"
 
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/dotfiles/.oh-my-zsh
 
 # I will use my own theme!
 ZSH_THEME="tklarry"
@@ -59,6 +59,8 @@ alias cd3='cd ../../..'
 alias cd4='cd ../../../..'
 alias cd5='cd ../../../../..'
 alias back='cd -'
+# link aliases
+alias slink='ln -s'
 # xsel aliases
 alias xselclip='xsel --clipboard'
 # make aliases
@@ -66,11 +68,11 @@ alias makelog='make >&log'
 # sudo aliases
 alias suvim='sudo vim'
 # important dir aliases
-alias ohmyzsh='cd ~/.oh-my-zsh'
+alias ohmyzsh='cd ~/dotfiles/.oh-my-zsh'
 alias dotfiles='cd ~/dotfiles'
 # config aliases
 alias zshrc='vim ~/.zshrc'
-alias zshreload='clear && source ~/.zshrc && echo "~/.zshrc successfully reloaded!"'
+alias zshreload='clear && source ~/.zshrc'
 alias gitconf='vim ~/.gitconfig'
 # other aliases
 alias cl='clear'
