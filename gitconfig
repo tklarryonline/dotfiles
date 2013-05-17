@@ -7,8 +7,8 @@
 	del = !git ls-files --deleted -z | xargs -0 git rm
 	last = log -1 HEAD
 	ru = remote update
-	stat = status
-	upstt = "!git ru; git stat"
+	stt = status
+	upstt = "!git ru; git stt"
 	ac = !git add . && git commit
 [core]
 	excludesfile = /home/tklarryonline/.gitignore
