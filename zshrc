@@ -78,7 +78,7 @@ alias dotfiles="cd $DOTFILES"
 # config aliases
 alias zshrc='vim ~/.zshrc'
 alias zshtheme="vim $DOTFILES/oh-my-zsh-custom/tklarry.zsh-theme"
-alias zshreload='clear && source ~/.zshrc'
+alias zshreload="clear && source $DOTFILES/oh-my-zsh-custom/tklarry.zsh-theme && source ~/.zshrc"
 alias vimrc='vim ~/.vimrc'
 alias gitconf='vim ~/.gitconfig'
 # other aliases

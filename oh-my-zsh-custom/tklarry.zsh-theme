@@ -1,6 +1,5 @@
 # My first creation in zsh theme, following a lot of tutorials on the Internet.
 #
-#
 # May 15, 2013 - tklarry
 
 # My symbols
@@ -24,8 +23,8 @@ function box_name {
 # normal prompt: →
 # gitdir prompt: ±
 function prompt_char {
-	git branch >/dev/null 2>/dev/null && echo "$PLUSMINUS" && return
-	echo "$FF_ARROW"
+	git branch >/dev/null 2>/dev/null && echo '±' && return
+	echo '→'
 }
 
 # Directory info.
@@ -33,7 +32,7 @@ local current_dir='${PWD/#$HOME/~}'
 
 # Git info.
 local git_info='$(git_prompt_info)'
-ZSH_THEME_GIT_PROMPT_PREFIX=" [git:%{$fg[cyan]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%} "
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}]"
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}x"
 ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}${CHECK}"
@@ -42,7 +41,6 @@ ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}${CHECK}"
 PROMPT="
 %{$fg[cyan]%}%n%{$reset_color%}: \
 %{$fg[yellow]%}${current_dir}%{$reset_color%}\
-${git_info}
-%{$terminfo[bold]$fg[blue]%}$(prompt_char) %{$reset_color%}"
-
-RPROMPT="%{$fg[white]%}[%*]"
+${git_info} \
+%{$fg[white]%}[%*]
+%{$terminfo[bold]$fg[blue]%}$FF_ARROW %{$reset_color%}"
