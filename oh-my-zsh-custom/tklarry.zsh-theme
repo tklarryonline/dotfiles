@@ -12,6 +12,7 @@ RECYCLE="♺"
 MIDDOT="•"
 PLUSMINUS="±"
 CHECK="✔"
+BRANCH="⭠"
 
 # Machine name.
 function box_name {
@@ -28,16 +29,20 @@ function prompt_char {
 }
 
 # Directory info.
+# Collapsed already
 local current_dir='${PWD/#$HOME/~}'
 
 # Git info.
+# [⭠ BRANCH] [STATE]
 local git_info='$(git_prompt_info)'
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%} "
+ZSH_THEME_GIT_PROMPT_PREFIX=" [%{$fg[blue]%}$BRANCH "
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}]"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}x"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}${CHECK}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%}] [%{$fg[red]%}x"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%}] [%{$fg[green]%}${CHECK}"
 
-# Prompt format: \n USER: DIRECTORY [ BRANCH STATE [TIME] ] \n → 
+# Prompt format:
+# USER: DIRECTORY [⭠ BRANCH] [STATE] [TIME]
+# → <cmd here>
 PROMPT="
 %{$fg[cyan]%}%n%{$reset_color%}: \
 %{$fg[yellow]%}${current_dir}%{$reset_color%}\
