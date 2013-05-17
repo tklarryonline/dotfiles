@@ -15,33 +15,6 @@ ZSH_CUSTOM=$DOTFILES/oh-my-zsh-custom
 # I will use my own theme!
 ZSH_THEME="tklarry"
 
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
-# Comment this out to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment to change how often before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want to disable command autocorrection
-# DISABLE_CORRECTION="true"
-
-# Uncomment following line if you want red dots to be displayed 
-# while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
 # Which plugins would you like to load? 
 # (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -75,11 +48,14 @@ alias suvim='sudo vim'
 # important dir aliases
 alias ohmyzsh="cd $DOTFILES/.oh-my-zsh"
 alias dotfiles="cd $DOTFILES"
-# config aliases
+# Zsh config aliases
 alias zshrc='vim ~/.zshrc'
 alias zshtheme="vim $DOTFILES/oh-my-zsh-custom/tklarry.zsh-theme"
-alias zshreload="clear && source $DOTFILES/oh-my-zsh-custom/tklarry.zsh-theme && source ~/.zshrc"
+alias zshreload="clear && source ~/.zshrc"
+# Vim config aliases
 alias vimrc='vim ~/.vimrc'
+alias vundle="vim $DOTFILES/vim/vundle.vim"
+# Git config aliases
 alias gitconf='vim ~/.gitconfig'
 # other aliases
 alias cl='clear'
