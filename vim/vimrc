@@ -3,14 +3,16 @@
 " ============================================
 
 " --------------------------------------------
-" IMPORTANT
+" 1. IMPORTANT
 " --------------------------------------------
 " Link to Vundle
 so ~/dotfiles/vim/vundle.vim
 
 " --------------------------------------------
-" MOVING AROUND, SEARCHING AND PATTERNS
+" 2. MOVING AROUND, SEARCHING AND PATTERNS
 " --------------------------------------------
+" Automatically changes to dir of file in buffer
+set autochdir
 " Shows search match as you type
 set incsearch
 " Ignores case when using a search pattern
@@ -19,19 +21,21 @@ set ignorecase
 set smartcase
 
 " --------------------------------------------
-" TAGS
+" 3. TAGS
 " --------------------------------------------
 
 " --------------------------------------------
-" DISPLAYING TEXT
+" 4. DISPLAYING TEXT
 " --------------------------------------------
 " Displays line number
 set number
 " Number of lines for the command window
 set cmdheight=2
+" Change default fonts
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
 
 " --------------------------------------------
-" SYNTAX, HIGHLIGHTING and SPELLING
+" 5. SYNTAX, HIGHLIGHTING and SPELLING
 " --------------------------------------------
 " Enables syntax highlighting
 syntax enable
@@ -40,31 +44,31 @@ filetype plugin indent on
 " 80-character indicator line
 set colorcolumn=80
 " Highlights current line
-set cul
+" set cul --this was commentted out because, well, cul sucks
 
 " --------------------------------------------
-" 6 multiple windows
-" --------------------------------------------
-
-" --------------------------------------------
-" 7 multiple tab pages
+" 6 MULTIPLE WINDOWS
 " --------------------------------------------
 
 " --------------------------------------------
-" 8 terminal
+" 7 MULTIPLE TAB PAGES
+" --------------------------------------------
+
+" --------------------------------------------
+" 8 TERMINAL
 " --------------------------------------------
 set ttyfast
 
 " --------------------------------------------
-" 9 using the mouse
+" 9 USING THE MOUSE
 " --------------------------------------------
 
 " --------------------------------------------
-" 10 printing
+" 10 PRINTING
 " --------------------------------------------
 
 " --------------------------------------------
-" 11 messages and info
+" 11 MESSAGES AND INFO
 " --------------------------------------------
 " Shows incomplete commands as type
 set showcmd
@@ -75,11 +79,11 @@ set ruler
 set confirm
 
 " --------------------------------------------
-" 12 selecting text
+" 12 SELECTING TEXT
 " --------------------------------------------
 
 " --------------------------------------------
-" 13 editing text
+" 13 EDITING TEXT
 " --------------------------------------------
 " Allows backspacing over everything
 set backspace=indent,eol,start
@@ -90,7 +94,8 @@ set undolevels=1000
 
 
 " --------------------------------------------
-" 14 tabs and indenting -- I prefer Tab to Space
+" 14 TABS AND INDENTING
+" I prefer <tab> to <space>
 " --------------------------------------------
 " Auto indenting ON
 set autoindent
@@ -112,68 +117,114 @@ vnoremap > >gv
 
 
 " --------------------------------------------
-" 15 folding
+" 15 FOLDING
 " --------------------------------------------
 
 " --------------------------------------------
-" 16 diff mode
+" 16 DIFF MODE
 " --------------------------------------------
 
 " --------------------------------------------
-" 17 mapping
+" 17 MAPPING
 " --------------------------------------------
 
 " --------------------------------------------
-" 18 reading and writing files
+" 18 READING AND WRITING FILES
 " --------------------------------------------
 " Auto reloads file on change
 set autoread
 
 " --------------------------------------------
-" 19 the swap file
+" 19 THE SWAP FILE
 " --------------------------------------------
 
 " --------------------------------------------
-" 20 command line editing
+" 20 COMMAND LINE EDITING
 " --------------------------------------------
 " Remembers 500 commands
 set history=500
 
 " --------------------------------------------
-" 21 executing external commands
+" 21 EXECUTING EXTERNAL COMMANDS
 " --------------------------------------------
 
 " --------------------------------------------
-" 22 running make and jumping to errors
+" 22 RUNNING MAKE AND JUMPING TO ERRORS
 " --------------------------------------------
 
 " --------------------------------------------
-" 23 language specific
+" 23 LANGUAGE SPECIFIC
 " --------------------------------------------
 
 " --------------------------------------------
-" 24 multi-byte characters
+" 24 MULTI-BYTE CHARACTERS
 " --------------------------------------------
 " Changes encoding to UTF-8
 set encoding=utf-8
 
 " --------------------------------------------
-" 25 various
+" 25 VARIOUS
 " --------------------------------------------
 
 " --------------------------------------------
 " FUNCTIONS
 " --------------------------------------------
+" Auto reloads vimrc
 augroup myvimrchooks
-au!
-autocmd bufwritepost .vimrc source ~/.vim/vimrc
+	au!
+	autocmd bufwritepost .vimrc source ~/.vimrc
 augroup END
+
+" Visually selects text and press ~ to toggle through cases.
+" There are three types:
+" 	all lowercase,
+" 	ALL UPPERCASE,
+" 	First Letter Uppercase
+" ToggleCase(str) {
+function! ToggleCase(str)
+	if a:str ==# toupper(a:str)
+		let result = tolower(a:str)
+	elseif a:str ==# tolower(a:str)
+		let result = substitute(a:str,'\(\<\w\+\>\)', '\u\1', 'g')
+	else
+		let result = toupper(a:str)
+	endif
+	return result
+endfunction
+" map '~' to ToggleCase()
+vnoremap ~ ygv"=ToggleCase(@")<CR>Pgv
+" }
 
 " --------------------------------------------
 " CUSTOM KEY BINDINGS
 " --------------------------------------------
+
+" ----- UTILITIES -----
+" ';' could be used as ':'
+nnoremap ; :
+vnoremap ; :
+
+" Maps <leader> from \ to ,
+let mapleader=","
+
+" Moving around tabs by <leader>n\m
+nnoremap <leader>n <esc>:tabp<cr>
+nnoremap <leader>m <esc>:tabn<cr>
+
+" ----- F<NUM> KEYS ----- 
 " F8 indents whole file
-nnoremap <f7> gg=G
+nnoremap <f8> gg=G
+
+" ----- QUICKLY OPENS CONFIG FILES ----- 
+" Vimrc files
+nnoremap <leader>ve :e<space>~/.vimrc<cr>
+nnoremap <leader>vt :tabe<space>~/.vimrc<cr> " Open in newtab
+nnoremap <leader>vv :tabe<space>~/dotfiles/vim/vundle.vim<cr> "This one too
+" Zshrc files
+nnoremap <leader>zr :e<space>~/.zshrc<cr>
+nnoremap <leader>zt :e<space>~/dotfiles/oh-my-zsh-custom/tklarry.zsh-theme<cr>
+" Git config files
+nnoremap <leader>gc :e<space>~/.gitconfig<cr>
 
 " ============================================
 " END MY VERY .VIMRC!!!

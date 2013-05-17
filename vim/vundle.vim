@@ -2,7 +2,7 @@
 " Vundle's file for VIM!!!!
 " ============================================================================
 " be using VImproved!
-set nocompatible               " be iMproved
+set nocompatible               
 filetype off                   " required!
 
 set rtp+=~/dotfiles/vim/bundle/vundle/
