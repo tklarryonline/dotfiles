@@ -219,6 +219,12 @@ nnoremap <leader>m <esc>:tabn<cr>
 " F5 toggles tagbar
 nnoremap <f5> :TagbarToggle<cr>
 
+" F6 Compile the file
+nnoremap <F6> <esc>:SCCompile<CR>
+
+" Ctrl + F6 compile and run
+nnoremap <leader><F6> <esc>:SCCompileRun<CR>
+
 " F8 indents whole file
 nnoremap <f8> gg=G
 

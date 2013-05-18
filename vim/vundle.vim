@@ -19,6 +19,11 @@ Bundle 'Raimondi/delimitMate'
 
 " Ultimate snip!
 Bundle 'SirVer/ultisnips'
+" Map snippet expand
+let g:UltiSnipsExpandTrigger = '<nl>'
+let g:UltiSnipsJumpForwardTrigger = '<m-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<m-k>'
+let g:UltiSnipsListSnippets = '<m-m>'
 
 " Auto-completion with clang compatible
 Bundle 'Valloric/YouCompleteMe'
@@ -41,3 +46,5 @@ endfunction
 " Tagbar
 Bundle 'majutsushi/tagbar'
 
+" Auto compile for small projects
+Bundle 'xuhdev/SingleCompile'
