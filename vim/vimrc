@@ -214,6 +214,9 @@ nmap <leader>w <c-w>
 nnoremap <leader>n <esc>:tabp<cr>
 nnoremap <leader>m <esc>:tabn<cr>
 
+" Auto add ; at the last
+inoremap <leader>s <C-o>m`<C-o>A;<C-o>``
+
 " ----- F<NUM> KEYS ----- 
 " ----- those may have plugins inside
 " F5 toggles tagbar
@@ -223,7 +226,7 @@ nnoremap <f5> :TagbarToggle<cr>
 nnoremap <F6> <esc>:SCCompile<CR>
 
 " Ctrl + F6 compile and run
-nnoremap <leader><F6> <esc>:SCCompileRun<CR>
+nnoremap <C-F6> <esc>:SCCompileRun<CR>
 
 " F8 indents whole file
 nnoremap <f8> gg=G
