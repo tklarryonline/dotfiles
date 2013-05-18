@@ -19,7 +19,7 @@ ZSH_THEME="tklarry"
 # (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git zsh-syntax-highlighting)
+plugins=(git extract zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -27,7 +27,7 @@ source $ZSH/oh-my-zsh.sh
 
 ### My own aliases
 # ll aliases
-alias ll='ls -alF'
+alias ll='ls -alhF'
 alias la='ls -A'
 alias l='ls -CF'
 # cd aliases
@@ -43,20 +43,29 @@ alias slink='ln -s'
 alias xselclip='xsel --clipboard'
 # make aliases
 alias makelog='make >&log'
-# sudo aliases
-alias suvim='sudo vim'
+# apt aliases
+alias apt-ins='sudo apt-get install'
+alias apt-unins='sudo apt-get remove'
+alias apt-add='sudo add-apt-repository'
+alias apt-update='sudo apt-get update'
+alias apt-cl='sudo apt-get clean'
+alias apt-autorm='sudo apt-get autoremove'
 # important dir aliases
-alias ohmyzsh="cd $DOTFILES/.oh-my-zsh"
 alias dotfiles="cd $DOTFILES"
 # Zsh config aliases
+alias ohmyzsh="cd $DOTFILES/.oh-my-zsh"
 alias zshrc='vim ~/.zshrc'
 alias zshtheme="vim $DOTFILES/oh-my-zsh-custom/tklarry.zsh-theme"
 alias zshreload="clear && source ~/.zshrc"
 # Vim config aliases
+alias suvim='sudo vim'
+alias myvim="cd $DOTFILES/vim/"
+alias myvimbundle="cd $DOTFILES/vim/bundle"
 alias vimrc='vim ~/.vimrc'
 alias vundle="vim $DOTFILES/vim/vundle.vim"
 # Git config aliases
 alias gitconf='vim ~/.gitconfig'
+# rm aliases
 # other aliases
 alias cl='clear'
 
