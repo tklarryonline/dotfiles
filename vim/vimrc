@@ -211,6 +211,10 @@ let mapleader=","
 nnoremap <leader>n <esc>:tabp<cr>
 nnoremap <leader>m <esc>:tabn<cr>
 
+" Moving around tabs by <leader>n\m
+nnoremap <leader>n <esc>:tabp<cr>
+nnoremap <leader>m <esc>:tabn<cr>
+
 " ----- F<NUM> KEYS ----- 
 " F8 indents whole file
 nnoremap <f8> gg=G
