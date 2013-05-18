@@ -207,17 +207,40 @@ vnoremap ; :
 " Maps <leader> from \ to ,
 let mapleader=","
 
-" Moving around tabs by <leader>n\m
-nnoremap <leader>n <esc>:tabp<cr>
-nnoremap <leader>m <esc>:tabn<cr>
+" C-w is super difficult to press, so make it <leader>w
+nmap <leader>w <c-w>
 
 " Moving around tabs by <leader>n\m
 nnoremap <leader>n <esc>:tabp<cr>
 nnoremap <leader>m <esc>:tabn<cr>
 
 " ----- F<NUM> KEYS ----- 
+" ----- those may have plugins inside
+" F5 toggles tagbar
+nnoremap <f5> :TagbarToggle<cr>
+
 " F8 indents whole file
 nnoremap <f8> gg=G
+
+" F11 maximizes current split (vertically only)
+nnoremap <f11> <c-w>99+
+
+" F12 minimizes current split (vertically only)
+nnoremap <f12> <c-w>99-
+
+" Up Down to adjust current split size
+nnoremap <up> <c-w>+
+nnoremap <down> <c-w>-
+
+" Left Right to cycle through buffers
+nnoremap <left> <c-w><
+nnoremap <right> <c-w>>
+
+" Moving around splits using Ctrl+h/j/k/l
+map <c-j> <c-w>j
+map <c-h> <c-w>h
+map <c-k> <c-w>k
+map <c-l> <c-w>l
 
 " ----- QUICKLY OPENS CONFIG FILES ----- 
 " Vimrc files
@@ -229,6 +252,14 @@ nnoremap <leader>zr :e<space>~/.zshrc<cr>
 nnoremap <leader>zt :e<space>~/dotfiles/oh-my-zsh-custom/tklarry.zsh-theme<cr>
 " Git config files
 nnoremap <leader>gc :e<space>~/.gitconfig<cr>
+
+" Write file with sudo permission
+nnoremap <leader>wf :w<space>!sudo<space>tee<space>%<cr>
+
+" ----- PLUGINS -----
+" NERDTree
+nnoremap <leader>d <esc>:NERDTree<cr>
+nnoremap <leader>e :NERDTreeToggle<cr>
 
 " ============================================
 " END MY VERY .VIMRC!!!

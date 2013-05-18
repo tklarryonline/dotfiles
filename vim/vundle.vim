@@ -1,8 +1,10 @@
+" ============================================================================
 " Vundle's file for VIM!!!!
 " ============================================================================
 " be using VImproved!
 set nocompatible               
-filetype off                   " required!
+" required!
+filetype off 
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -14,6 +16,28 @@ Bundle 'gmarik/vundle'
 " ----- Selected Plugins -----
 " Auto close for quotes, brackets, etc.
 Bundle 'Raimondi/delimitMate'
+
+" Ultimate snip!
 Bundle 'SirVer/ultisnips'
+
+" Auto-completion with clang compatible
 Bundle 'Valloric/YouCompleteMe'
+
+" NERDtree
+Bundle 'scrooloose/nerdtree'
+" Auto quit NERDTree if it's the only buffer left {
+autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
+function! s:CloseIfOnlyNerdTreeLeft()
+	if exists("t:NERDTreeBufName")
+		if bufwinnr(t:NERDTreeBufName) != -1
+			if winnr("$") == 1
+				q
+			endif
+		endif
+	endif
+endfunction
+"}
+
+" Tagbar
+Bundle 'majutsushi/tagbar'
 
