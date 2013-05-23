@@ -45,12 +45,13 @@ syntax enable
 filetype plugin indent on
 " 80-character indicator line
 set colorcolumn=80
-" Highlights current line
-" set cul --this was commentted out because, well, cul sucks
+" Highlight all matches search result
+set hlsearch
 
 " --------------------------------------------
 " 6 MULTIPLE WINDOWS
 " --------------------------------------------
+set laststatus=2
 
 " --------------------------------------------
 " 7 MULTIPLE TAB PAGES
@@ -143,7 +144,8 @@ vnoremap > >gv
 " --------------------------------------------
 " Auto reloads file on change
 set autoread
-set modeline
+" Prevent some security exploits having to do with modelines
+set modelines=0
 
 " --------------------------------------------
 " 20 THE SWAP FILE
@@ -157,6 +159,7 @@ set modeline
 set history=500
 " Command-line completion shows a list of matches
 set wildmenu
+set wildmode=list:longest,full 
 
 " --------------------------------------------
 " 22 EXECUTING EXTERNAL COMMANDS
@@ -236,6 +239,8 @@ nmap <leader>w <c-w>
 "  4 DISPLAYING TEXT -------------------------
 
 "  5 SYNTAX, HIGHLIGHTING AND SPELLING -------
+" Clear out a search
+nnoremap <leader><space> :noh<cr>
 
 "  6 MULTIPLE WINDOWS ------------------------
 " Moving around splits using Ctrl+h/j/k/l
@@ -312,6 +317,9 @@ nnoremap <leader>gc :e<space>~/.gitconfig<cr>
 " Left Right to cycle through buffers
 nnoremap <left> <c-w><
 nnoremap <right> <c-w>>
+
+" Open vim options help file in new tab
+nnoremap <leader>h :tabe<space>~/Documents/optionwindow<cr>
 
 " 20 THE SWAP FILE ---------------------------
 
