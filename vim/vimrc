@@ -33,6 +33,8 @@ set number
 set cmdheight=2
 " Change default fonts
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
+" Make sure there are at least 3 lines under the cursor
+set scrolloff=3
 
 " --------------------------------------------
 " 5. SYNTAX, HIGHLIGHTING and SPELLING
@@ -64,26 +66,34 @@ set ttyfast
 " --------------------------------------------
 
 " --------------------------------------------
-" 10 PRINTING
+" 10 GUI
 " --------------------------------------------
 
 " --------------------------------------------
-" 11 MESSAGES AND INFO
+" 11 PRINTING
+" --------------------------------------------
+
+" --------------------------------------------
+" 12 MESSAGES AND INFO
 " --------------------------------------------
 " Shows incomplete commands as type
 set showcmd
+" Display the current mode in the status bar
+set showmode
 " Always displays the current cursor position in Status Bar
 set ruler
 " Asks to save buffer instead of failing when executing
 " commands which close buffers
 set confirm
+" Well, a nice bell
+set visualbell
 
 " --------------------------------------------
-" 12 SELECTING TEXT
+" 13 SELECTING TEXT
 " --------------------------------------------
 
 " --------------------------------------------
-" 13 EDITING TEXT
+" 14 EDITING TEXT
 " --------------------------------------------
 " Allows backspacing over everything
 set backspace=indent,eol,start
@@ -94,7 +104,7 @@ set undolevels=1000
 
 
 " --------------------------------------------
-" 14 TABS AND INDENTING
+" 15 TABS AND INDENTING
 " I prefer <tab> to <space>
 " --------------------------------------------
 " Auto indenting ON
@@ -117,53 +127,57 @@ vnoremap > >gv
 
 
 " --------------------------------------------
-" 15 FOLDING
+" 16 FOLDING
 " --------------------------------------------
 
 " --------------------------------------------
-" 16 DIFF MODE
+" 17 DIFF MODE
 " --------------------------------------------
 
 " --------------------------------------------
-" 17 MAPPING
+" 18 MAPPING
 " --------------------------------------------
 
 " --------------------------------------------
-" 18 READING AND WRITING FILES
+" 19 READING AND WRITING FILES
 " --------------------------------------------
 " Auto reloads file on change
 set autoread
+set modeline
 
 " --------------------------------------------
-" 19 THE SWAP FILE
+" 20 THE SWAP FILE
 " --------------------------------------------
 
+
 " --------------------------------------------
-" 20 COMMAND LINE EDITING
+" 21 COMMAND LINE EDITING
 " --------------------------------------------
 " Remembers 500 commands
 set history=500
+" Command-line completion shows a list of matches
+set wildmenu
 
 " --------------------------------------------
-" 21 EXECUTING EXTERNAL COMMANDS
-" --------------------------------------------
-
-" --------------------------------------------
-" 22 RUNNING MAKE AND JUMPING TO ERRORS
-" --------------------------------------------
-
-" --------------------------------------------
-" 23 LANGUAGE SPECIFIC
+" 22 EXECUTING EXTERNAL COMMANDS
 " --------------------------------------------
 
 " --------------------------------------------
-" 24 MULTI-BYTE CHARACTERS
+" 23 RUNNING MAKE AND JUMPING TO ERRORS
+" --------------------------------------------
+
+" --------------------------------------------
+" 24 LANGUAGE SPECIFIC
+" --------------------------------------------
+
+" --------------------------------------------
+" 25 MULTI-BYTE CHARACTERS
 " --------------------------------------------
 " Changes encoding to UTF-8
 set encoding=utf-8
 
 " --------------------------------------------
-" 25 VARIOUS
+" 26 VARIOUS
 " --------------------------------------------
 
 " --------------------------------------------
@@ -199,7 +213,7 @@ vnoremap ~ ygv"=ToggleCase(@")<CR>Pgv
 " CUSTOM KEY BINDINGS
 " --------------------------------------------
 
-" ----- UTILITIES -----
+"  1 IMPORTANT -------------------------------
 " ';' could be used as ':'
 nnoremap ; :
 vnoremap ; :
@@ -216,6 +230,14 @@ nnoremap <leader>m <esc>:tabn<cr>
 
 " Auto add ; at the last
 inoremap <leader>s <C-o>m`<C-o>A;<C-o>``
+
+" Move lines
+nmap <A-S-down> :m<space>.+1<CR>==
+nmap <A-S-up> :m<space>.-2<CR>==
+inoremap <A-S-down> <Esc>:m .+1<CR>==gi
+inoremap <A-S-up> <Esc>:m .-2<CR>==gi
+vnoremap <A-S-down> :m '>+1<CR>gv=gv
+vnoremap <A-S-up> :m '<-2<CR>gv=gv
 
 " ----- F<NUM> KEYS ----- 
 " ----- those may have plugins inside
@@ -269,6 +291,33 @@ nnoremap <leader>wf :w<space>!sudo<space>tee<space>%<cr>
 " NERDTree
 nnoremap <leader>d <esc>:NERDTree<cr>
 nnoremap <leader>e :NERDTreeToggle<cr>
+
+
+"  2 moving around, searching and patterns -----------------------------------
+"  3 tags
+"  4 displaying text
+"  5 syntax, highlighting and spelling
+"  6 multiple windows
+"  7 multiple tab pages
+"  8 terminal
+"  9 using the mouse
+" 10 GUI
+" 11 printing
+" 12 messages and info
+" 13 selecting text
+" 14 editing text
+" 15 tabs and indenting
+" 16 folding
+" 17 diff mode
+" 18 mapping
+" 19 reading and writing files
+" 20 the swap file
+" 21 command line editing
+" 22 executing external commands
+" 23 running make and jumping to errors
+" 24 language specific
+" 25 multi-byte characters
+" 26 various
 
 " ============================================
 " END MY VERY .VIMRC!!!
