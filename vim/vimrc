@@ -214,6 +214,11 @@ vnoremap ~ ygv"=ToggleCase(@")<CR>Pgv
 " --------------------------------------------
 
 "  1 IMPORTANT -------------------------------
+" Map 'jk' to <ESC>
+nnoremap jk <ESC>
+inoremap jk <ESC>
+vnoremap jk <ESC>
+
 " ';' could be used as ':'
 nnoremap ; :
 vnoremap ; :
@@ -224,34 +229,20 @@ let mapleader=","
 " C-w is super difficult to press, so make it <leader>w
 nmap <leader>w <c-w>
 
-" Moving around tabs by <leader>n\m
-nnoremap <leader>n <esc>:tabp<cr>
-nnoremap <leader>m <esc>:tabn<cr>
+"  2 MOVING AROUND, SEARCHING AND PATTERNS ---
 
-" Auto add ; at the last
-inoremap <leader>s <C-o>m`<C-o>A;<C-o>``
+"  3 TAGS ------------------------------------
 
-" Move lines
-nmap <A-S-down> :m<space>.+1<CR>==
-nmap <A-S-up> :m<space>.-2<CR>==
-inoremap <A-S-down> <Esc>:m .+1<CR>==gi
-inoremap <A-S-up> <Esc>:m .-2<CR>==gi
-vnoremap <A-S-down> :m '>+1<CR>gv=gv
-vnoremap <A-S-up> :m '<-2<CR>gv=gv
+"  4 DISPLAYING TEXT -------------------------
 
-" ----- F<NUM> KEYS ----- 
-" ----- those may have plugins inside
-" F5 toggles tagbar
-nnoremap <f5> :TagbarToggle<cr>
+"  5 SYNTAX, HIGHLIGHTING AND SPELLING -------
 
-" F6 Compile the file
-nnoremap <F6> <esc>:SCCompile<CR>
-
-" Ctrl + F6 compile and run
-nnoremap <C-F6> <esc>:SCCompileRun<CR>
-
-" F8 indents whole file
-nnoremap <f8> gg=G
+"  6 MULTIPLE WINDOWS ------------------------
+" Moving around splits using Ctrl+h/j/k/l
+map <c-j> <c-w>j
+map <c-h> <c-w>h
+map <c-k> <c-w>k
+map <c-l> <c-w>l
 
 " F11 maximizes current split (vertically only)
 nnoremap <f11> <c-w>99+
@@ -263,17 +254,50 @@ nnoremap <f12> <c-w>99-
 nnoremap <up> <c-w>+
 nnoremap <down> <c-w>-
 
-" Left Right to cycle through buffers
-nnoremap <left> <c-w><
-nnoremap <right> <c-w>>
+"  7 MULTIPLE TAB PAGES ----------------------
+" Moving around tabs by <leader>n\m
+nnoremap <leader>n <esc>:tabp<cr>
+nnoremap <leader>m <esc>:tabn<cr>
 
-" Moving around splits using Ctrl+h/j/k/l
-map <c-j> <c-w>j
-map <c-h> <c-w>h
-map <c-k> <c-w>k
-map <c-l> <c-w>l
+"  8 TERMINAL --------------------------------
 
-" ----- QUICKLY OPENS CONFIG FILES ----- 
+"  9 USING THE MOUSE -------------------------
+
+" 10 GUI -------------------------------------
+
+" 11 PRINTING --------------------------------
+
+" 12 MESSAGES AND INFO -----------------------
+
+" 13 SELECTING TEXT --------------------------
+
+" 14 EDITING TEXT ----------------------------
+" Auto add ; at the last
+inoremap <leader>s <C-o>m`<C-o>A;<C-o>``
+
+" Move lines
+nmap <A-S-down> :m<space>.+1<CR>==
+nmap <A-S-up> :m<space>.-2<CR>==
+inoremap <A-S-down> <Esc>:m .+1<CR>==gi
+inoremap <A-S-up> <Esc>:m .-2<CR>==gi
+vnoremap <A-S-down> :m '>+1<CR>gv=gv
+vnoremap <A-S-up> :m '<-2<CR>gv=gv
+
+" 15 TABS AND INDENTING ----------------------
+" F8 indents whole file
+nnoremap <f8> gg=G
+
+" 16 FOLDING ---------------------------------
+
+" 17 DIFF MODE -------------------------------
+
+" 18 MAPPING ---------------------------------
+
+" 19 READING AND WRITING FILES ---------------
+" Write file with sudo permission
+nnoremap <leader>wf :w<space>!sudo<space>tee<space>%<cr>
+
+" Quickly open config files ----- {{{
 " Vimrc files
 nnoremap <leader>ve :e<space>~/.vimrc<cr>
 nnoremap <leader>vt :tabe<space>~/.vimrc<cr> " Open in newtab
@@ -283,41 +307,37 @@ nnoremap <leader>zr :e<space>~/.zshrc<cr>
 nnoremap <leader>zt :e<space>~/dotfiles/oh-my-zsh-custom/tklarry.zsh-theme<cr>
 " Git config files
 nnoremap <leader>gc :e<space>~/.gitconfig<cr>
+" }}}
 
-" Write file with sudo permission
-nnoremap <leader>wf :w<space>!sudo<space>tee<space>%<cr>
+" Left Right to cycle through buffers
+nnoremap <left> <c-w><
+nnoremap <right> <c-w>>
 
-" ----- PLUGINS -----
+" 20 THE SWAP FILE ---------------------------
+
+" 21 COMMAND LINE EDITING --------------------
+
+" 22 EXECUTING EXTERNAL COMMANDS/PLUGINS -----
 " NERDTree
 nnoremap <leader>d <esc>:NERDTree<cr>
 nnoremap <leader>e :NERDTreeToggle<cr>
 
+" F5 toggles tagbar
+nnoremap <f5> :TagbarToggle<cr>
 
-"  2 moving around, searching and patterns -----------------------------------
-"  3 tags
-"  4 displaying text
-"  5 syntax, highlighting and spelling
-"  6 multiple windows
-"  7 multiple tab pages
-"  8 terminal
-"  9 using the mouse
-" 10 GUI
-" 11 printing
-" 12 messages and info
-" 13 selecting text
-" 14 editing text
-" 15 tabs and indenting
-" 16 folding
-" 17 diff mode
-" 18 mapping
-" 19 reading and writing files
-" 20 the swap file
-" 21 command line editing
-" 22 executing external commands
-" 23 running make and jumping to errors
-" 24 language specific
-" 25 multi-byte characters
-" 26 various
+" F6 Compile the file
+nnoremap <F6> <esc>:SCCompile<CR>
+
+" Ctrl + F6 compile and run
+nnoremap <C-F6> <esc>:SCCompileRun<CR>
+
+" 23 RUNNING MAKE AND JUMPING TO ERRORS ------
+
+" 24 LANGUAGE SPECIFIC -----------------------
+
+" 25 MULTI-BYTE CHARACTERS -------------------
+
+" 26 VARIOUS ---------------------------------
 
 " ============================================
 " END MY VERY .VIMRC!!!
