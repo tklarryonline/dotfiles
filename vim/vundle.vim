@@ -30,7 +30,7 @@ Bundle 'Valloric/YouCompleteMe'
 
 " NERDtree
 Bundle 'scrooloose/nerdtree'
-" Auto quit NERDTree if it's the only buffer left {
+" Auto quit NERDTree if it's the only buffer left {{{
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 function! s:CloseIfOnlyNerdTreeLeft()
 	if exists("t:NERDTreeBufName")
@@ -41,10 +41,11 @@ function! s:CloseIfOnlyNerdTreeLeft()
 		endif
 	endif
 endfunction
-"}
+"}}}
 
 " Tagbar
 Bundle 'majutsushi/tagbar'
 
 " Auto compile for small projects
 Bundle 'xuhdev/SingleCompile'
+

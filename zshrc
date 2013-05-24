@@ -2,10 +2,7 @@
 DOTFILES=$HOME/dotfiles
 
 # Give a welcome message
-echo "Welcome"
-cat $DOTFILES/art
-echo "The Awesomeness has just begun...\n"
-
+# Well, a welcome message is really cheesy...
 # Path to your oh-my-zsh configuration.
 ZSH=$DOTFILES/.oh-my-zsh
 
@@ -72,6 +69,9 @@ alias cl='clear'
 ### Exports
 export TERM='xterm-256color'
 export EDITOR=vim
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=xim
 
 ### Some conditions
 # enable color support of ls and also add handy aliases
