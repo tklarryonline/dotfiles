@@ -16,7 +16,7 @@ ZSH_THEME="tklarry"
 # (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git extract zsh-syntax-highlighting)
+plugins=(git bundler ruby rails gem extract zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -62,7 +62,12 @@ alias vimrc='vim ~/.vimrc'
 alias vundle="vim $DOTFILES/vim/vundle.vim"
 # Git config aliases
 alias gitconf='vim ~/.gitconfig'
+# Blogging using jekyll
+alias tk.me='cd ~/Sites/tklarryonline.me/tklarryonline.github.io'
+alias tk.run='jekyll serve --watch'
+alias tk.io='tk.me && tk.run'
 # rm aliases
+alias rmrf='rm -rf'
 # other aliases
 alias cl='clear'
 
