@@ -10,6 +10,7 @@
 	stt = status
 	upstt = "!git ru; git stt"
 	ac = !git add . && git commit
+	acm = !git ac -m
 [core]
 	excludesfile = /home/tklarryonline/.gitignore
 	editor = vim
