@@ -33,6 +33,8 @@ set number
 set cmdheight=2
 " Change default fonts
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
+" Wrap longlines at space ' '
+set linebreak
 " Make sure there are at least 3 lines under the cursor
 set scrolloff=3
 
@@ -102,6 +104,8 @@ set backspace=indent,eol,start
 set showmatch
 " Uses many levels of undo
 set undolevels=1000
+" Use omnifunc for css
+set omnifunc=csscomplete#CompleteCSS
 
 
 " --------------------------------------------
@@ -218,9 +222,7 @@ vnoremap ~ ygv"=ToggleCase(@")<CR>Pgv
 
 "  1 IMPORTANT -------------------------------
 " Map 'jk' to <ESC>
-nnoremap jk <ESC>
 inoremap jk <ESC>
-vnoremap jk <ESC>
 
 " ';' could be used as ':'
 nnoremap ; :
