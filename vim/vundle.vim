@@ -30,6 +30,11 @@ Bundle 'Valloric/YouCompleteMe'
 
 " NERDtree
 Bundle 'scrooloose/nerdtree'
+" Auto open NERDTree when open vim
+autocmd VimEnter * NERDTree
+autocmd BufEnter * NERDTreeMirror
+" Place the cursor directly on the file I'm intended to edit
+autocmd VimEnter * wincmd w
 " Auto quit NERDTree if it's the only buffer left {{{
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 function! s:CloseIfOnlyNerdTreeLeft()
@@ -49,3 +54,18 @@ Bundle 'majutsushi/tagbar'
 " Auto compile for small projects
 Bundle 'xuhdev/SingleCompile'
 
+" Markdown Vim mode
+Bundle 'plasticboy/vim-markdown'
+" Disable folding for markdown
+let g:vim_markdown_folding_disabled=1
+" Enable wrapline for Markdown
+augroup WrapLineInMDFile
+	autocmd!
+	autocmd FileType md setlocal wrap
+augroup END
+
+" Vim-Ruby
+Bundle 'vim-ruby/vim-ruby'
+
+" Vim-Rails by awesome Tpope
+Bundle 'tpope/vim-rails'
