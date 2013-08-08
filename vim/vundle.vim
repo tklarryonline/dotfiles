@@ -84,3 +84,11 @@ augroup END
 " Powerline
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
+" Fugitive - Git plugin for Vim
+Bundle 'tpope/vim-fugitive'
+
+" Python-mode!!!"
+Bundle 'klen/python-mode'
+
+" Auto-complete Jedi-style for Python
+Bundle 'davidhalter/jedi-vim'
