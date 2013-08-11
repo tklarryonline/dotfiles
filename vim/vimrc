@@ -314,6 +314,7 @@ nnoremap <leader>zr :e<space>~/.zshrc<cr>
 nnoremap <leader>zt :e<space>~/dotfiles/oh-my-zsh-custom/tklarry.zsh-theme<cr>
 " Git config files
 nnoremap <leader>gc :e<space>~/.gitconfig<cr>
+nnoremap <leader>gt :tabe<space>~/.gitconfig<cr>
 " }}}
 
 " Left Right to cycle through buffers
