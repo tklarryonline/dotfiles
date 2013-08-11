@@ -16,7 +16,7 @@ ZSH_THEME="tklarry"
 # (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler ruby rails gem extract zsh-syntax-highlighting)
+plugins=(brew bundler extract gem git pip rails ruby zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,10 +83,10 @@ export QT_IM_MODULE=xim
 if [ "$TERM" != "dumb" ]; then
 	[ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
 	[ -e "$DIR_COLORS" ] || DIR_COLORS=""
-	eval "`dircolors -b $DIR_COLORS`"
-	alias ls='ls --color=auto'
-	alias dir='ls --color=auto --format=vertical'
-	alias vdir='ls --color=auto --format=long'
+	eval $(dircolors $HOME/dotfiles/dircolors)
+	alias ls='ls -G'
+	alias dir='ls -G --format=vertical'
+	alias vdir='ls -G --format=long'
 fi
 
 ### My own functions
