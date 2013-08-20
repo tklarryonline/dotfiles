@@ -92,3 +92,9 @@ Bundle 'klen/python-mode'
 
 " Auto-complete Jedi-style for Python
 Bundle 'davidhalter/jedi-vim'
+
+" Nerd commenter
+Bundle 'scrooloose/nerdcommenter'
+
+" Haml to the rescue
+Bundle 'tpope/vim-haml'
