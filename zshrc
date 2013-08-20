@@ -83,10 +83,10 @@ export QT_IM_MODULE=xim
 if [ "$TERM" != "dumb" ]; then
 	[ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
 	[ -e "$DIR_COLORS" ] || DIR_COLORS=""
-	eval $(dircolors $HOME/dotfiles/dircolors)
-	alias ls='ls -G'
-	alias dir='ls -G --format=vertical'
-	alias vdir='ls -G --format=long'
+	eval "`dircolors -b $DIR_COLORS`"
+	alias ls='ls --color=auto'
+	alias dir='ls --color=auto --format=vertical'
+	alias vdir='ls --color=auto --format=long'
 fi
 
 ### My own functions
