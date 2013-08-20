@@ -4,7 +4,7 @@ DOTFILES=$HOME/dotfiles
 # Give a welcome message
 # Well, a welcome message is really cheesy...
 # Path to your oh-my-zsh configuration.
-ZSH=$DOTFILES/.oh-my-zsh
+ZSH=$DOTFILES/oh-my-zsh
 
 # Path to my custom folders
 ZSH_CUSTOM=$DOTFILES/oh-my-zsh-custom
