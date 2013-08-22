@@ -72,7 +72,7 @@ alias rmrf='rm -rf'
 alias cl='clear'
 
 ### Exports
-export TERM='xterm-256color'
+export TERM=xterm-256color
 export EDITOR=vim
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
@@ -99,3 +99,4 @@ mkgo() {
 
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM 
