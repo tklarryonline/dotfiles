@@ -117,7 +117,7 @@ set autoindent
 " Copies the previous indentation on auto indenting
 set copyindent
 " Uses tabs instead of spaces
-set noexpandtab
+set expandtab
 " Sets tab stop = 4 - my fav stop
 set tabstop=4
 " Number of spaces used for auto indenting
