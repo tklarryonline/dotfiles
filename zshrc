@@ -16,7 +16,7 @@ ZSH_THEME="tklarry"
 # (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew bundler extract gem git pip rails ruby zsh-syntax-highlighting)
+plugins=(brew bundler command-not-found extract gem git pip rails3 ruby rvm zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
