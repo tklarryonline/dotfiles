@@ -110,7 +110,7 @@ set omnifunc=csscomplete#CompleteCSS
 
 " --------------------------------------------
 " 15 TABS AND INDENTING
-" I prefer <tab> to <space>
+" I prefer <space> to <tab>
 " --------------------------------------------
 " Auto indenting ON
 set autoindent
@@ -126,10 +126,6 @@ set shiftwidth=4
 set smarttab
 " Uses multiple of shiftwidth when indenting with '<' and '>'
 set shiftround
-" Easier block indenting (does not exit visual mode after one shift)
-vnoremap < <gv
-vnoremap > >gv
-
 
 " --------------------------------------------
 " 16 FOLDING
@@ -242,7 +238,7 @@ nmap <leader>w <c-w>
 
 "  5 SYNTAX, HIGHLIGHTING AND SPELLING -------
 " Clear out a search
-nnoremap <leader><space> :noh<cr>
+nnoremap <esc> :noh<cr>
 
 "  6 MULTIPLE WINDOWS ------------------------
 " Moving around splits using Ctrl+h/j/k/l
@@ -293,6 +289,9 @@ vnoremap <A-S-up> :m '<-2<CR>gv=gv
 " 15 TABS AND INDENTING ----------------------
 " F8 indents whole file
 nnoremap <f8> gg=G
+" Easier block indenting (does not exit visual mode after one shift)
+vnoremap <S-Tab> <gv
+vnoremap <Tab> >gv
 
 " 16 FOLDING ---------------------------------
 
