@@ -98,3 +98,10 @@ Bundle 'scrooloose/nerdcommenter'
 
 " Haml to the rescue
 Bundle 'tpope/vim-haml'
+
+" Command-T
+" Awesome fuzzy search (love this feature in SublimeText)
+Bundle 'wincent/Command-T'
+noremap <leader>o <Esc>:CommandT<cr>
+noremap <leader>O <Esc>:CommandTFlush<cr>
+noremap <leader>m <Esc>:CommandTBuffer<cr>
