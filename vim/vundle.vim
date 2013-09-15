@@ -98,3 +98,6 @@ Bundle 'scrooloose/nerdcommenter'
 
 " Haml to the rescue
 Bundle 'tpope/vim-haml'
+
+" Vim-liquid
+Bundle 'tpope/vim-liquid'
