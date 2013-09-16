@@ -238,7 +238,7 @@ nmap <leader>w <c-w>
 
 "  5 SYNTAX, HIGHLIGHTING AND SPELLING -------
 " Clear out a search
-nnoremap <esc> :noh<cr>
+nnoremap <leader><space> :noh<cr>
 
 "  6 MULTIPLE WINDOWS ------------------------
 " Moving around splits using Ctrl+h/j/k/l
@@ -279,7 +279,7 @@ nnoremap <leader>m <esc>:tabn<cr>
 inoremap <leader>s <C-o>m`<C-o>A;<C-o>``
 
 " Move lines
-nmap <A-S-down> :m<space>.+1<CR>==
+nmap <A-j> :m<space>.+1<CR>==
 nmap <A-S-up> :m<space>.-2<CR>==
 inoremap <A-S-down> <Esc>:m .+1<CR>==gi
 inoremap <A-S-up> <Esc>:m .-2<CR>==gi
