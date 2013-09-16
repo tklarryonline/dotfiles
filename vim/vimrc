@@ -116,7 +116,7 @@ set omnifunc=csscomplete#CompleteCSS
 set autoindent
 " Copies the previous indentation on auto indenting
 set copyindent
-" Uses tabs instead of spaces
+" Uses spaces instead of tabs
 set expandtab
 " Sets tab stop = 4 - my fav stop
 set tabstop=4
