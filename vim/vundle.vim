@@ -105,3 +105,7 @@ Bundle 'wincent/Command-T'
 noremap <leader>o <Esc>:CommandT<cr>
 noremap <leader>O <Esc>:CommandTFlush<cr>
 noremap <leader>m <Esc>:CommandTBuffer<cr>
+
+" Vim-liquid
+Bundle 'tpope/vim-liquid'
+
