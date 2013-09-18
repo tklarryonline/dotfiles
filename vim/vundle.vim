@@ -102,3 +102,5 @@ Bundle 'tpope/vim-haml'
 " Vim-liquid
 Bundle 'tpope/vim-liquid'
 
+" HTML5 for Vim
+Bundle 'othree/html5.vim'
