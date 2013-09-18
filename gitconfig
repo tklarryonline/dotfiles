@@ -11,6 +11,7 @@
 	upstt = "!git ru; git stt"
 	ac = !git add . && git commit
 	acm = !git ac -m
+	co = checkout
 [core]
 	excludesfile = /home/tklarryonline/.gitignore
 	editor = vim
