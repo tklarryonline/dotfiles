@@ -212,6 +212,18 @@ endfunction
 vnoremap ~ ygv"=ToggleCase(@")<CR>Pgv
 " }
 
+" Indent options for Ruby group
+function SetRubyAndWebOption()
+    setlocal shiftwidth=2
+    setlocal tabstop=2
+endfunction
+autocmd Filetype ruby call SetRubyAndWebOption()
+autocmd Filetype eruby call SetRubyAndWebOption()
+autocmd Filetype html call SetRubyAndWebOption()
+autocmd Filetype haml call SetRubyAndWebOption()
+autocmd Filetype liquid call SetRubyAndWebOption()
+
+
 " --------------------------------------------
 " CUSTOM KEY BINDINGS
 " --------------------------------------------
