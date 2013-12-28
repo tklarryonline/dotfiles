@@ -74,21 +74,15 @@ alias rmrf='rm -rf'
 alias cl='clear'
 
 ### Exports
-export TERM=xterm-256color
-export EDITOR=vim
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=xim
 
 ### Some conditions
-# enable color support of ls and also add handy aliases
-if [ "$TERM" != "dumb" ]; then
-	[ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
-	[ -e "$DIR_COLORS" ] || DIR_COLORS=""
-	eval "`dircolors -b $DIR_COLORS`"
-	alias ls='ls --color=auto'
-	alias dir='ls --color=auto --format=vertical'
-	alias vdir='ls --color=auto --format=long'
+# OS specific settings
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # Mac OS X settings
+    source $DOTFILES/os-specific-settings/mac-os-x.sh
+elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+    # Linux GNU
+    source $DOTFILES/os-specific-settings/linux.sh
 fi
 
 ### My own functions
