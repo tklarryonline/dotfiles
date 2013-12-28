@@ -1,5 +1,7 @@
 ### ENV vars
+# My personal folders
 DOTFILES=$HOME/dotfiles
+PROJ=$HOME/Projects
 
 # Give a welcome message
 # Well, a welcome message is really cheesy...
