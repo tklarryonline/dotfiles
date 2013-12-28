@@ -3,8 +3,6 @@
 DOTFILES=$HOME/dotfiles
 PROJ=$HOME/Projects
 
-# Give a welcome message
-# Well, a welcome message is really cheesy...
 # Path to your oh-my-zsh configuration.
 ZSH=$DOTFILES/oh-my-zsh
 
@@ -14,7 +12,7 @@ ZSH_CUSTOM=$DOTFILES/oh-my-zsh-custom
 # I will use my own theme!
 ZSH_THEME="tklarry"
 
-# Which plugins would you like to load? 
+### Which plugins would you like to load?
 # (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -22,7 +20,9 @@ plugins=(brew bundler command-not-found extract gem git pip rails3 ruby rvm zsh-
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
+###############################################################################
+### Customize to your needs...
+###############################################################################
 
 ### My own aliases
 # ll aliases
