@@ -250,7 +250,7 @@ nmap <leader>w <c-w>
 
 "  5 SYNTAX, HIGHLIGHTING AND SPELLING -------
 " Clear out a search
-nnoremap <leader><space> :noh<cr>
+nnoremap <leader><space> :noh<CR><Esc>
 
 "  6 MULTIPLE WINDOWS ------------------------
 " Moving around splits using Ctrl+h/j/k/l
@@ -312,6 +312,8 @@ vnoremap <Tab> >gv
 " 18 MAPPING ---------------------------------
 
 " 19 READING AND WRITING FILES ---------------
+" ss to save file -- much more quicker
+nmap ss :w<CR>
 " Write file with sudo permission
 nnoremap <leader>wf :w<space>!sudo<space>tee<space>%<cr>
 
@@ -343,8 +345,8 @@ imap <Nul> <C-Space>
 
 " 22 EXECUTING EXTERNAL COMMANDS/PLUGINS -----
 " NERDTree
-nnoremap <leader>d <esc>:NERDTree<cr>
-nnoremap <leader>e :NERDTreeToggle<cr>
+nnoremap <leader>n :NERDTree .<cr>
+nnoremap <leader>nt :NERDTreeToggle<cr>
 
 " F5 toggles tagbar
 nnoremap <f5> :TagbarToggle<cr>
