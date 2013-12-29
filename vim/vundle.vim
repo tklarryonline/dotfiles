@@ -35,6 +35,8 @@ autocmd VimEnter * NERDTree
 autocmd BufEnter * NERDTreeMirror
 " Show line-number
 let g:NERDTreeShowLineNumbers=1
+" Make sure the working dir is set correctly
+let g:NERDTreeChDirMode=2
 " Place the cursor directly on the file I'm intended to edit
 autocmd VimEnter * wincmd w
 " Auto quit NERDTree if it's the only buffer left {{{
