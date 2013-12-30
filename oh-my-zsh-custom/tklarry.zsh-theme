@@ -1,7 +1,3 @@
-# My first creation in zsh theme, following a lot of tutorials on the Internet.
-#
-# May 15, 2013 - tklarry
-
 # My symbols
 LIGHTNING_BOLT="⚡"
 UP_ARROW="↑"
@@ -12,7 +8,7 @@ RECYCLE="♺"
 MIDDOT="•"
 PLUSMINUS="±"
 CHECK="✔"
-BRANCH="⭠"
+BRANCH="$MIDDOT"
 
 # Machine name.
 function box_name {
@@ -33,19 +29,19 @@ function prompt_char {
 local current_dir='${PWD/#$HOME/~}'
 
 # Git info.
-# [⭠ BRANCH] [STATE]
+# on BRANCH (STATE)
 local git_info='$(git_prompt_info)'
-ZSH_THEME_GIT_PROMPT_PREFIX=" [%{$fg[blue]%}$BRANCH "
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}]"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%}] [%{$fg[red]%}x"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%}] [%{$fg[green]%}${CHECK}"
+ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[blue]%}$BRANCH"
+ZSH_THEME_GIT_PROMPT_SUFFIX=""
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%} (%{$fg[red]%}x%{$reset_color%})"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%} (%{$fg[green]%}${CHECK}%{$reset_color%})"
 
 # Prompt format:
-# USER: DIRECTORY [⭠ BRANCH] [STATE] [TIME]
+# USER at DIRECTORY on BRANCH (STATE) (TIME)
 # → <cmd here>
 PROMPT="
-%{$fg[cyan]%}%n%{$reset_color%}: \
+%{$fg[cyan]%}%n%{$reset_color%} at \
 %{$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${git_info} \
-%{$fg[white]%}[%*]
+%{$fg[white]%}(%*)
 %{$terminfo[bold]$fg[blue]%}$FF_ARROW %{$reset_color%}"
