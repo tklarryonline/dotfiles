@@ -13,5 +13,5 @@
 	acm = !git ac -m
 	co = checkout
 [core]
-	excludesfile = /home/tklarryonline/.gitignore
+	excludesfile = ~/.gitignore
 	editor = vim

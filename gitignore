@@ -8,3 +8,5 @@
 # Ignore
 *.swp
 *.swo
+.bundle/
+*.log
