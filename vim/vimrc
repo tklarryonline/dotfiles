@@ -68,6 +68,9 @@ set hlsearch
 " 6 MULTIPLE WINDOWS
 " --------------------------------------------
 set laststatus=2
+" A new window is put in the bottom-right of the current one
+set splitbelow
+set splitright
 
 " --------------------------------------------
 " 7 MULTIPLE TAB PAGES

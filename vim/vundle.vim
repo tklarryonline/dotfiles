@@ -113,3 +113,9 @@ Bundle 'othree/html5.vim'
 " I decided to use the current colorscheme in my iTerm,
 " which is Solarized!!! \m/
 "Bundle 'flazz/vim-colorschemes'
+
+" Fuzzysearch FTW!
+Bundle 'kien/ctrlp.vim'
+let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_match_window_reversed = 0
+let MRU_Max_Entries = 400
