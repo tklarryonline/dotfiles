@@ -60,7 +60,7 @@ alias zshreload="clear && source ~/.zshrc"
 alias suvim='sudo vim'
 alias myvim="cd $DOTFILES/vim/"
 alias myvimbundle="cd $DOTFILES/vim/bundle"
-alias vimrc='vim ~/.vimrc'
+alias vimrc="vim $DOTFILES/vim/vimrc"
 alias vundle="vim $DOTFILES/vim/vundle.vim"
 # Git config aliases
 alias gitconf='vim ~/.gitconfig'
