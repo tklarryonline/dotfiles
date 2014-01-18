@@ -100,6 +100,7 @@ vnoremap <Tab> >gv
 " 19 READING AND WRITING FILES ---------------
 " ss to save file -- much more quicker
 nmap ss :w<CR>
+
 " Write file with sudo permission
 nnoremap <leader>wf :w<space>!sudo<space>tee<space>%<cr>
 
