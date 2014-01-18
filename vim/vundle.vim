@@ -26,13 +26,15 @@ let g:UltiSnipsJumpBackwardTrigger = '<m-k>'
 let g:UltiSnipsListSnippets = '<m-m>'
 
 " Auto-completion with clang compatible
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 
 " NERDtree
 Bundle 'scrooloose/nerdtree'
 " Auto open NERDTree when open vim
-autocmd VimEnter * NERDTree
-autocmd BufEnter * NERDTreeMirror
+" On second thought, it would be better if NERDTree is not opened
+" I would toggle it later
+"autocmd VimEnter * NERDTree
+"autocmd BufEnter * NERDTreeMirror
 " Show line-number
 let g:NERDTreeShowLineNumbers=1
 " Make sure the working dir is set correctly
@@ -106,3 +108,8 @@ Bundle 'tpope/vim-liquid'
 
 " HTML5 for Vim
 Bundle 'othree/html5.vim'
+
+" Some colorschemes shall we?
+" I decided to use the current colorscheme in my iTerm,
+" which is Solarized!!! \m/
+"Bundle 'flazz/vim-colorschemes'

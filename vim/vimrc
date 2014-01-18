@@ -34,7 +34,7 @@ set cmdheight=2
 " Change default fonts
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
 " Wrap longlines at space ' '
-set linebreak
+"set linebreak
 " Make sure there are at least 3 lines under the cursor
 set scrolloff=3
 " Make whitespaces visible
