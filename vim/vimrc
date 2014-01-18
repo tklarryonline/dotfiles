@@ -37,6 +37,18 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
 set linebreak
 " Make sure there are at least 3 lines under the cursor
 set scrolloff=3
+" Make whitespaces visible
+set list
+" and the listchars
+" reset it first
+set listchars=""
+" a tab should display as `,
+set listchars=tab:>-
+" trailing whitespace as .
+set listchars+=trail:.
+" Show < or > when characters are not displayed on the left or right.
+set listchars+=extends:>
+set listchars+=precedes:<
 
 " --------------------------------------------
 " 5. SYNTAX, HIGHLIGHTING and SPELLING
@@ -159,7 +171,7 @@ set modelines=0
 set history=500
 " Command-line completion shows a list of matches
 set wildmenu
-set wildmode=list:longest,full 
+set wildmode=list:longest,full
 
 " --------------------------------------------
 " 22 EXECUTING EXTERNAL COMMANDS

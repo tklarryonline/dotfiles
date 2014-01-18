@@ -2,15 +2,15 @@
 " Vundle's file for VIM!!!!
 " ============================================================================
 " be using VImproved!
-set nocompatible               
+set nocompatible
 " required!
-filetype off 
+filetype off
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 " ----- Selected Plugins -----
@@ -42,13 +42,13 @@ autocmd VimEnter * wincmd w
 " Auto quit NERDTree if it's the only buffer left {{{
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 function! s:CloseIfOnlyNerdTreeLeft()
-	if exists("t:NERDTreeBufName")
-		if bufwinnr(t:NERDTreeBufName) != -1
-			if winnr("$") == 1
-				q
-			endif
-		endif
-	endif
+    if exists("t:NERDTreeBufName")
+        if bufwinnr(t:NERDTreeBufName) != -1
+            if winnr("$") == 1
+                q
+            endif
+        endif
+    endif
 endfunction
 "}}}
 
@@ -64,8 +64,8 @@ Bundle 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled=1
 " Enable wrapline for Markdown
 augroup WrapLineInMDFile
-	autocmd!
-	autocmd FileType md setlocal wrap
+    autocmd!
+    autocmd FileType md setlocal wrap
 augroup END
 
 " Vim-Ruby
@@ -76,11 +76,11 @@ Bundle 'tpope/vim-rails'
 
 " Highlight excess line length for Python files
 augroup vimrc_autocmds
-	autocmd!
-	" highlight chars past col 120"
-	autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
-	autocmd FileType python match Excess /\%120v.*/
-	autocmd FileType python set nowrap
+    autocmd!
+    " highlight chars past col 120"
+    autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
+    autocmd FileType python match Excess /\%120v.*/
+    autocmd FileType python set nowrap
 augroup END
 
 " Powerline
