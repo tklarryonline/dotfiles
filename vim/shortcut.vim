@@ -105,15 +105,15 @@ nnoremap <leader>wf :w<space>!sudo<space>tee<space>%<cr>
 
 " Quickly open config files ----- {{{
 " Vimrc files
-nnoremap <leader>ve :e<space>~/.vimrc<cr>
-nnoremap <leader>vt :tabe<space>~/.vimrc<cr> " Open in newtab
-nnoremap <leader>vv :tabe<space>~/dotfiles/vim/vundle.vim<cr> "This one too
+nnoremap <leader>gve :e<space>~/.vimrc<cr>
+nnoremap <leader>gvt :tabe<space>~/.vimrc<cr> " Open in newtab
+nnoremap <leader>gvv :tabe<space>~/dotfiles/vim/vundle.vim<cr> "This one too
 " Zshrc files
-nnoremap <leader>zr :e<space>~/.zshrc<cr>
-nnoremap <leader>zt :e<space>~/dotfiles/oh-my-zsh-custom/tklarry.zsh-theme<cr>
+nnoremap <leader>gzr :e<space>~/.zshrc<cr>
+nnoremap <leader>gzt :e<space>~/dotfiles/oh-my-zsh-custom/tklarry.zsh-theme<cr>
 " Git config files
-nnoremap <leader>gc :e<space>~/.gitconfig<cr>
-nnoremap <leader>gt :tabe<space>~/.gitconfig<cr>
+nnoremap <leader>ggc :e<space>~/.gitconfig<cr>
+nnoremap <leader>ggt :tabe<space>~/.gitconfig<cr>
 " }}}
 
 " Left Right to cycle through buffers
