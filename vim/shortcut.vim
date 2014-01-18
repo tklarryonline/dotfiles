@@ -152,6 +152,9 @@ nnoremap <F6> <esc>:SCCompile<CR>
 " Ctrl + F6 compile and run
 nnoremap <C-F6> <esc>:SCCompileRun<CR>
 
+" run Ag for current word
+nnoremap gA :Ag! <cword><CR>
+
 " 23 RUNNING MAKE AND JUMPING TO ERRORS ------
 
 " 24 LANGUAGE SPECIFIC -----------------------
