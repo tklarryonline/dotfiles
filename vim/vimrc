@@ -60,7 +60,7 @@ syntax enable
 " Filetype Detection ON
 filetype plugin indent on
 " 80-character indicator line
-set colorcolumn=80
+set colorcolumn=120
 " Highlight all matches search result
 set hlsearch
 
