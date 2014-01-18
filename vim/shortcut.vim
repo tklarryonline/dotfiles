@@ -16,6 +16,9 @@ let mapleader=","
 " C-w is super difficult to press, so make it <leader>w
 nmap <leader>w <c-w>
 
+" Make C-space usable
+imap <Nul> <C-Space>
+
 "  2 MOVING AROUND, SEARCHING AND PATTERNS ---
 
 "  3 TAGS ------------------------------------
@@ -59,6 +62,12 @@ nnoremap <leader>m <esc>:tabn<cr>
 " 12 MESSAGES AND INFO -----------------------
 
 " 13 SELECTING TEXT --------------------------
+" Duplicate a selection in Visual mode
+vmap D y'>p
+
+" Make Y to be consistent with C and D
+" (Yank to the end of line)
+nnoremap Y y$
 
 " 14 EDITING TEXT ----------------------------
 " Auto add ; at the last
@@ -71,6 +80,9 @@ inoremap <A-S-down> <Esc>:m .+1<CR>==gi
 inoremap <A-S-up> <Esc>:m .-2<CR>==gi
 vnoremap <A-S-down> :m '>+1<CR>gv=gv
 vnoremap <A-S-up> :m '<-2<CR>gv=gv
+
+" Ctrl+Space to auto complete on local buff
+imap <C-Space> <C-P>
 
 " 15 TABS AND INDENTING ----------------------
 " F8 indents whole file
@@ -111,11 +123,12 @@ nnoremap <right> <c-w>>
 " Open vim options help file in new tab
 nnoremap <leader>h :tabe<space>~/Documents/optionwindow<cr>
 
+" Expand current file's path
+cnoremap <C-F> <C-R>=expand('%:p:h')<CR>
+
 " 20 THE SWAP FILE ---------------------------
 
 " 21 COMMAND LINE EDITING --------------------
-" Make C-space usable
-imap <Nul> <C-Space>
 
 " 22 EXECUTING EXTERNAL COMMANDS/PLUGINS -----
 " NERDTree
