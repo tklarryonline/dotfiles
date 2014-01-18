@@ -12,6 +12,11 @@
 	ac = !git add . && git commit
 	acm = !git ac -m
 	co = checkout
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
+	trustExitCode = true
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
