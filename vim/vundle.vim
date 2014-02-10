@@ -145,3 +145,11 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+" Browser reload - easier for me
+Bundle "tell-k/vim-browsereload-mac"
+" Returns to iTerm window
+" But this only useful on multiple screen...
+"let g:returnApp = "iTerm"
+" Stop returnApp. Change this when you get to work on multiple screen
+let g:returnAppFlag = 0
