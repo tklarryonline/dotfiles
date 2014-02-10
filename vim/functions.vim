@@ -27,6 +27,15 @@ endfunction
 vnoremap ~ ygv"=ToggleCase(@")<CR>Pgv
 " }
 
+" Highlight excess line length for Python files
+augroup vimrc_autocmds
+    autocmd!
+    " highlight chars past col 120"
+    autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
+    autocmd FileType python match Excess /\%120v.*/
+    autocmd FileType python set nowrap
+augroup END
+
 " Indent options for Ruby group
 function SetRubyAndWebOption()
     setlocal shiftwidth=2

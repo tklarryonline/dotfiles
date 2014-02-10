@@ -76,15 +76,6 @@ Bundle 'vim-ruby/vim-ruby'
 " Vim-Rails by awesome Tpope
 Bundle 'tpope/vim-rails'
 
-" Highlight excess line length for Python files
-augroup vimrc_autocmds
-    autocmd!
-    " highlight chars past col 120"
-    autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
-    autocmd FileType python match Excess /\%120v.*/
-    autocmd FileType python set nowrap
-augroup END
-
 " Powerline
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
