@@ -118,6 +118,8 @@ Bundle 'kien/ctrlp.vim'
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0
 let MRU_Max_Entries = 400
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_root_markers = ['manage.py']
 
 " Ag for awesome code searching
 Bundle 'rking/ag.vim'
