@@ -92,6 +92,9 @@ Bundle 'klen/python-mode'
 
 " Auto-complete Jedi-style for Python
 Bundle 'davidhalter/jedi-vim'
+" Don't select the first candidate
+let g:jedi#popup_select_first = 0
+let g:jedi#auto_vim_configuration = 0
 
 " Nerd commenter
 Bundle 'scrooloose/nerdcommenter'
@@ -175,5 +178,8 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+" AutoComplPop like behavior.
+let g:neocomplete#enable_auto_select = 0
+
 " GitGutter for ultimate
 Bundle 'airblade/vim-gitgutter'
