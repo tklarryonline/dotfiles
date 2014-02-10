@@ -77,7 +77,12 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 
 " Powerline
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" try Vim Airline
+Bundle 'bling/vim-airline'
+" Use powerline symbols
+let g:airline_powerline_fonts = 1
 
 " Fugitive - Git plugin for Vim
 Bundle 'tpope/vim-fugitive'
