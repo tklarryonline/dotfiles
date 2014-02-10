@@ -154,5 +154,26 @@ Bundle "tell-k/vim-browsereload-mac"
 " Stop returnApp. Change this when you get to work on multiple screen
 let g:returnAppFlag = 0
 
+" Trying NeoComplete
+Bundle 'Shougo/neocomplete'
+" Run at startup
+let g:neocomplete#enable_at_startup = 1
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+    return neocomplete#close_popup() . "\<CR>"
+    " For no inserting <CR> key.
+    "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+endfunction
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" Enable Omni completion
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " GitGutter for ultimate
 Bundle 'airblade/vim-gitgutter'
