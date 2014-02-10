@@ -20,8 +20,8 @@ function box_name {
 # normal prompt: →
 # gitdir prompt: ±
 function prompt_char {
-	git branch >/dev/null 2>/dev/null && echo '±' && return
-	echo '→'
+    git branch >/dev/null 2>/dev/null && echo '±' && return
+    echo '→'
 }
 
 # Directory info.
@@ -36,11 +36,25 @@ ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%} (%{$fg[red]%}x%{$reset_color%})"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%} (%{$fg[green]%}${CHECK}%{$reset_color%})"
 
+# Virtualenv indicator config
+export VIRTUAL_ENV_DISABLE_PROMPT=yes
+
+function virtualenv_indicator {
+    if [[ -z $VIRTUAL_ENV ]] then
+        psvar[1]=''
+    else
+        psvar[1]=${VIRTUAL_ENV##*/}
+    fi
+}
+
+add-zsh-hook precmd virtualenv_indicator
+
 # Prompt format:
 # USER at DIRECTORY on BRANCH (STATE) (TIME)
 # → <cmd here>
 PROMPT="
-%{$fg[cyan]%}%n%{$reset_color%} at \
+%(1V.(%1v)
+.)%{$fg[cyan]%}%n%{$reset_color%} at \
 %{$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${git_info} \
 %{$fg[white]%}(%*)
