@@ -153,3 +153,6 @@ Bundle "tell-k/vim-browsereload-mac"
 "let g:returnApp = "iTerm"
 " Stop returnApp. Change this when you get to work on multiple screen
 let g:returnAppFlag = 0
+
+" GitGutter for ultimate
+Bundle 'airblade/vim-gitgutter'
