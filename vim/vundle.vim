@@ -89,6 +89,10 @@ Bundle 'tpope/vim-fugitive'
 
 " Python-mode!!!"
 Bundle 'klen/python-mode'
+" Check code on save if file has been modified
+let g:pymode_lint_on_write = 1
+" Ignore E302 - 2 blank lines expected warning
+let g:pymode_lint_ignore = "E302"
 
 " Auto-complete Jedi-style for Python
 Bundle 'davidhalter/jedi-vim'
