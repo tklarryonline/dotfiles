@@ -16,7 +16,7 @@ ZSH_THEME="tklarry"
 # (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew bundler command-not-found extract gem git pip rails ruby rvm zsh-syntax-highlighting)
+plugins=(bower brew bundler command-not-found django extract gem git pip zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -65,13 +65,15 @@ alias vundle="vim $DOTFILES/vim/vundle.vim"
 # Git config aliases
 alias gitconf='vim ~/.gitconfig'
 # Blogging using jekyll
-alias tk.me='cd ~/Sites/tklarryonline.me/tklarryonline.github.io'
+alias tk.me='cd ~/Projects/personal/tk.io'
 alias tk.run='jekyll serve --watch'
 alias tk.io='tk.me && tk.run'
 # rm aliases
 alias rmrf='rm -rf'
 # other aliases
 alias cl='clear'
+alias wifi_off='networksetup -setairportpower en0 off'
+alias wifi_on='networksetup -setairportpower en0 on'
 
 ### Exports
 
@@ -94,12 +96,35 @@ mkgo() {
 
 
 
+PATH=/Users/tklarryonline/.rvm/gems/ruby-2.0.0-p353/bin:$PATH
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# Added brew path
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+export PATH=/Users/tklarryonline/dse/bin:$PATH
+
 # Virtualenv paths
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+
+# Added GNU gettext library
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+
+# PyENV configs
+eval "$(pyenv init -)"
+# PyENV Virtualenvwrapper
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+pyenv virtualenvwrapper
+
+# added by travis gem
+[ -f /Users/tklarryonline/.travis/travis.sh ] && source /Users/tklarryonline/.travis/travis.sh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Configuration for icu4c
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"

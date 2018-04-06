@@ -1,6 +1,6 @@
 [user]
-	name = Luan Nguyen Thanh
-	email = tklarryonline@gmail.com
+	name = Luan Nguyen
+	email = luan@tklarryonline.me
 [color]
 	ui = auto
 [alias]
@@ -18,5 +18,20 @@
 	cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
 	trustExitCode = true
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/tklarryonline/.gitignore
 	editor = vim
+[push]
+	default = simple
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/tklarryonline/.stCommitMsg

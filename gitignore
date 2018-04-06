@@ -4,9 +4,24 @@
 
 # Ignores temporary files
 *~
+# Ignore on Mac OS X
+.DS_Store
 
 # Ignore
 *.swp
 *.swo
 .bundle/
 *.log
+
+# IDEs
+.idea
+
+# bower_components dir
+bower_components
+
+# Sass cache files
+.sass-cache/
+
+*.orig
+
+*.pyc

@@ -43,9 +43,10 @@ function SetRubyAndWebOption()
 endfunction
 autocmd Filetype ruby call SetRubyAndWebOption()
 autocmd Filetype eruby call SetRubyAndWebOption()
-autocmd Filetype html call SetRubyAndWebOption()
 autocmd Filetype haml call SetRubyAndWebOption()
 autocmd Filetype liquid call SetRubyAndWebOption()
+autocmd Filetype scss call SetRubyAndWebOption()
+autocmd Filetype css call SetRubyAndWebOption()
 
 " Hightlight ExtraWhiteSpace
 highlight ExtraWhitespace ctermbg=green ctermfg=white guibg=green guifg=white
@@ -61,3 +62,12 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " Change highlighting for search hits
 highlight Search ctermbg=white guibg=white
+
+" Autocmd for Python/Django development
+" Automatically set the filetype of HTML to htmldjango
+au BufNewFile,BufRead *.html setlocal filetype=htmldjango
+" Indent options for Python/Django group
+function SetPythonDjangoOption()
+    setlocal shiftwidth=4
+    setlocal tabstop=4
+endfunction
