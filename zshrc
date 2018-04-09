@@ -1,7 +1,7 @@
 ### ENV vars
 # My personal folders
 DOTFILES=$HOME/dotfiles
-PROJ=$HOME/Projects
+PROJ=$HOME/Dev
 
 # Path to your oh-my-zsh configuration.
 ZSH=$DOTFILES/oh-my-zsh
@@ -105,8 +105,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # Added brew path
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-export PATH=/Users/tklarryonline/dse/bin:$PATH
 
 # Virtualenv paths
 export WORKON_HOME=$HOME/.virtualenvs
