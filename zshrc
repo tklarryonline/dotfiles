@@ -91,7 +91,12 @@ fi
 #
 # mkgo - mkdir + cd
 mkgo() {
-	mkdir $1 && cd $1
+    mkdir $1 && cd $1
+}
+
+# new dock space
+new_dock_space() {
+    defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock
 }
 
 
