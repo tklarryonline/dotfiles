@@ -25,6 +25,8 @@ source $ZSH/oh-my-zsh.sh
 ###############################################################################
 
 ### My own aliases
+# Prefer NeoVim (nvim) over Vim
+alias vim=nvim
 # ll aliases
 alias ll='ls -alhF'
 alias la='ls -A'
@@ -42,32 +44,19 @@ alias slink='ln -s'
 alias xselclip='xsel --clipboard'
 # make aliases
 alias makelog='make >&log'
-# apt aliases
-alias apt-ins='sudo apt-get install'
-alias apt-unins='sudo apt-get remove'
-alias apt-add='sudo add-apt-repository'
-alias apt-update='sudo apt-get update'
-alias apt-cl='sudo apt-get clean'
-alias apt-autorm='sudo apt-get autoremove'
 # important dir aliases
 alias dotfiles="cd $DOTFILES"
 # Zsh config aliases
 alias ohmyzsh="cd $DOTFILES/.oh-my-zsh"
 alias zshrc='vim ~/.zshrc'
 alias zshtheme="vim $DOTFILES/oh-my-zsh-custom/tklarry.zsh-theme"
-alias zshreload="clear && source ~/.zshrc"
+alias reloadshell="eval $SHELL && clear"
 # Vim config aliases
 alias suvim='sudo vim'
-alias myvim="cd $DOTFILES/vim/"
-alias myvimbundle="cd $DOTFILES/vim/bundle"
-alias vimrc="vim $DOTFILES/vim/vimrc"
-alias vundle="vim $DOTFILES/vim/vundle.vim"
 # Git config aliases
 alias gitconf='vim ~/.gitconfig'
 # Blogging using jekyll
-alias tk.me='cd ~/Projects/personal/tk.io'
-alias tk.run='jekyll serve --watch'
-alias tk.io='tk.me && tk.run'
+alias tk.me="cd $PROJ/personal/tk.io"
 # rm aliases
 alias rmrf='rm -rf'
 # other aliases
@@ -101,7 +90,6 @@ new_dock_space() {
 
 
 
-PATH=/Users/tklarryonline/.rvm/gems/ruby-2.0.0-p353/bin:$PATH
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM
 
