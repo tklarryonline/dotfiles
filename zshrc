@@ -108,6 +108,7 @@ export PATH="/usr/local/opt/gettext/bin:$PATH"
 
 # PyENV configs
 eval "$(pyenv init -)"
+export PYENV_ROOT="$(pyenv root)"
 # PyENV Virtualenvwrapper
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 pyenv virtualenvwrapper
