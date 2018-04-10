@@ -1,0 +1,2 @@
+" Map 'jk' to ESC
+inoremap jk <Esc>
