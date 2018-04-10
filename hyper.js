@@ -15,7 +15,7 @@ module.exports = {
     fontFamily: '"Fira Code", Hack, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(248,28,229,0.8)',
+    cursorColor: '#839496',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
     cursorShape: 'BLOCK',
@@ -31,6 +31,9 @@ module.exports = {
 
     // border color (window, tabs)
     borderColor: '#333',
+
+    // selection color
+    selectionColor: '#ddd',
 
     // custom css to embed in the main window
     css: '',
@@ -71,6 +74,8 @@ module.exports = {
       lightCyan: '#00ffff',
       lightWhite: '#ffffff'
     },
+
+    // Configures for the Material Theme
     MaterialTheme: {
         // Set the theme variant,
         // OPTIONS: 'Darker', 'Palenight', ''
@@ -134,7 +139,8 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     'hyper-material-theme',
-    'hypercwd'
+    'hypercwd',
+    'hyperterm-cursor'
   ],
 
   // in development, you can create a directory under
