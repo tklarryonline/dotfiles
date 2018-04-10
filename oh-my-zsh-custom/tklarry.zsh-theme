@@ -31,7 +31,7 @@ local current_dir='${PWD/#$HOME/~}'
 # Git info.
 # on BRANCH (STATE)
 local git_info='$(git_prompt_info)'
-ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[blue]%}$BRANCH"
+ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[cyan]%}$BRANCH"
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%} (%{$fg[red]%}x%{$reset_color%})"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%} (%{$fg[green]%}${CHECK}%{$reset_color%})"
