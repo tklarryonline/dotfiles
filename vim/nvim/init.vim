@@ -1,4 +1,11 @@
-" vim-bootstrap b990cad
+" NeoVim settings
+
+"*****************************************************************************
+"" Core Settings
+"*****************************************************************************
+let g:python_host_prog = '~/.pyenv/versions/2.7.14/bin/python'
+let g:python2_host_prog = '~/.pyenv/versions/2.7.14/bin/python'
+let g:python3_host_prog = '~/.pyenv/versions/3.6.5/bin/python'
 
 "*****************************************************************************
 "" Vim-PLug core
